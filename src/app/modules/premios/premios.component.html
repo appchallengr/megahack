@@ -1,0 +1,218 @@
+<div class="headerBack">
+    <i routerLink="" class="fas fa-angle-left" style="color:#FFF; font-size:22px"></i> 
+    <div class="headerTitle">PRÊMIOS</div>
+</div>
+<div class="header">
+    <div class="infoUser">
+        <div class="small">Seja Bem Vindo(a)</div>
+        <div class="big">LUIZ ANTONIO FERNANDES</div>
+    </div>
+    <div class="avatarUser">
+    </div>
+</div>
+<div class="headerInfo">
+    <div class="title">
+        PONTUAÇÃO ATUAL
+    </div>
+    <div class="infoSub">
+        <div class="points">
+            520 PONTOS
+        </div>
+        <div class="smallSub" (click)="showExtrato()" *ngIf="!extrato">
+            Saiba Mais
+        </div>
+    </div>
+
+    <div class="title" style="margin-top:20px;" *ngIf="extrato">
+        EXTRATO
+    </div>
+    <div class="containerExtrato" *ngIf="extrato">
+        <div class="rowExtrato">
+            <div class="id1">
+                <span class="purple">25/04 - Farmácia Vitae</span>
+                <br/> Pontos Acumulados
+            </div>
+            <div class="id2">
+                R$67,56<br/>
+                <span class="purple">25 Pontos</span>
+            </div>
+        </div>
+        <div class="rowExtrato">
+            <div class="id1">
+                <span class="purple">25/04 - Farmácia Vitae</span>
+                <br/> Pontos Acumulados
+            </div>
+            <div class="id2">
+                R$67,56<br/>
+                <span class="purple">25 Pontos</span>
+            </div>
+        </div>
+        <div class="rowExtrato">
+            <div class="id1">
+                <span class="purple">25/04 - Farmácia Vitae</span>
+                <br/> Pontos Acumulados
+            </div>
+            <div class="id2">
+                R$67,56<br/>
+                <span class="purple">25 Pontos</span>
+            </div>
+        </div>
+        <div class="rowExtratoUp">
+            <i class="fas fa-sort-up" (click)="hideExtrato()"></i>
+        </div>
+    </div>
+
+    <div class="title" style="margin-top:20px;">
+        ESTRELAS
+    </div>
+    <div class="infoSub" style="border: none;">
+        <div class="points">
+            <i class="fas fa-star yellow"></i>
+            <i class="fas fa-star yellow"></i>
+            <i class="fas fa-star yellow"></i>
+            <i class="fas fa-star gray"></i>
+            <i class="fas fa-star gray"></i>
+        </div>
+        <div class="smallSub" routerLink="premios">
+            Troque por Prêmios
+        </div>
+    </div>
+</div>
+
+<div class="headerInfo2">
+    <div class="title"  (click)="showPontuacao()">
+        COMO FUNCIONA A PONTUAÇÃO
+    </div>
+    
+    <div class="title" style="margin-top:20px;" *ngIf="pontuacao">
+        No Together, suas compras valem pontos que geram estrelas, e você poderá trocar por grandes prêmios e serviços
+    </div>
+    <div class="containerExtrato" *ngIf="pontuacao">
+        <div class="rowExtrato" style="margin-top: 10px;">
+            <div class="id1">
+                <span class="purple">Até 200 Pontos</span>
+                <br/> 
+                <i class="fas fa-star yellow"></i>
+                <i class="fas fa-star gray"></i>
+                <i class="fas fa-star gray"></i>
+                <i class="fas fa-star gray"></i>
+                <i class="fas fa-star gray"></i>
+            </div>
+        </div>
+        <div class="rowExtrato" style="margin-top: 10px;">
+            <div class="id1">
+                <span class="purple">Até 400 Pontos</span>
+                <br/> 
+                <i class="fas fa-star yellow"></i>
+                <i class="fas fa-star yellow"></i>
+                <i class="fas fa-star gray"></i>
+                <i class="fas fa-star gray"></i>
+                <i class="fas fa-star gray"></i>
+            </div>
+        </div>
+        <div class="rowExtrato" style="margin-top: 10px;">
+            <div class="id1">
+                <span class="purple">Até 600 Pontos</span>
+                <br/> 
+                <i class="fas fa-star yellow"></i>
+                <i class="fas fa-star yellow"></i>
+                <i class="fas fa-star yellow"></i>
+                <i class="fas fa-star gray"></i>
+                <i class="fas fa-star gray"></i>
+            </div>
+        </div>
+        <div class="rowExtrato" style="margin-top: 10px;">
+            <div class="id1">
+                <span class="purple">Até 800 Pontos</span>
+                <br/> 
+                <i class="fas fa-star yellow"></i>
+                <i class="fas fa-star yellow"></i>
+                <i class="fas fa-star yellow"></i>
+                <i class="fas fa-star yellow"></i>
+                <i class="fas fa-star gray"></i>
+            </div>
+        </div>
+        <div class="rowExtrato" style="margin-top: 10px;">
+            <div class="id1">
+                <span class="purple">Acima de 1000 pontos</span>
+                <br/> 
+                <i class="fas fa-star yellow"></i>
+                <i class="fas fa-star yellow"></i>
+                <i class="fas fa-star yellow"></i>
+                <i class="fas fa-star yellow"></i>
+                <i class="fas fa-star yellow"></i>
+            </div>
+        </div>
+        <div class="rowExtratoUp">
+            <i class="fas fa-sort-up" (click)="hidePontuacao()"></i>
+        </div>
+    </div>
+</div>
+
+<div class="boxSearch">
+    <input type="text" class="inputSearch" placeholder="O que você precisa hoje?"/>
+    <i class="fas fa-search iconSearch"></i>
+</div>
+
+<div class="containerServicos">
+    <div class="boxServico" routerLink="/resgatar-premio">
+        <div class="containerImage">
+            <img src="../../../assets/imagens/servico1.jpg" />
+        </div>
+        <div class="infoServico">
+            <div class="titleProduct">
+                Colinas Society
+            </div>
+            <div class="priceProduct">
+                R$ 100 / Hora
+            </div>
+            <div class="starProduct">
+                <i class="fas fa-star yellow"></i>
+                <i class="fas fa-star yellow"></i>
+                <i class="fas fa-star yellow"></i>
+                <i class="fas fa-star gray"></i>
+                <i class="fas fa-star gray"></i>
+            </div>
+        </div>
+    </div>
+    <div class="boxServico">
+        <div class="containerImage">
+            <img src="../../../assets/imagens/servico1.jpg" />
+        </div>
+        <div class="infoServico">
+            <div class="titleProduct">
+                Colinas Society
+            </div>
+            <div class="priceProduct">
+                R$ 100 / Hora
+            </div>
+            <div class="starProduct">
+                <i class="fas fa-star yellow"></i>
+                <i class="fas fa-star yellow"></i>
+                <i class="fas fa-star yellow"></i>
+                <i class="fas fa-star gray"></i>
+                <i class="fas fa-star gray"></i>
+            </div>
+        </div>
+    </div>
+    <div class="boxServico">
+        <div class="containerImage">
+            <img src="../../../assets/imagens/servico1.jpg" />
+        </div>
+        <div class="infoServico">
+            <div class="titleProduct">
+                Colinas Society
+            </div>
+            <div class="priceProduct">
+                R$ 100 / Hora
+            </div>
+            <div class="starProduct">
+                <i class="fas fa-star yellow"></i>
+                <i class="fas fa-star yellow"></i>
+                <i class="fas fa-star yellow"></i>
+                <i class="fas fa-star gray"></i>
+                <i class="fas fa-star gray"></i>
+            </div>
+        </div>
+    </div>
+</div>

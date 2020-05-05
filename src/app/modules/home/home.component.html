@@ -1,0 +1,227 @@
+<div class="header">
+    <div class="infoUser">
+        <div class="small">Seja Bem Vindo(a)</div>
+        <div class="big">LUIZ ANTONIO FERNANDES</div>
+    </div>
+    <div class="avatarUser">
+    </div>
+</div>
+<div class="headerInfo">
+    <div class="title">
+        PONTUAÇÃO ATUAL
+    </div>
+    <div class="infoSub">
+        <div class="points">
+            520 PONTOS
+        </div>
+        <div class="smallSub" (click)="showExtrato()" *ngIf="!extrato">
+            Saiba Mais
+        </div>
+    </div>
+
+    <div class="title" style="margin-top:20px;" *ngIf="extrato">
+        EXTRATO
+    </div>
+    <div class="containerExtrato" *ngIf="extrato">
+        <div class="rowExtrato">
+            <div class="id1">
+                <span class="purple">25/04 - Farmácia Vitae</span>
+                <br/> Pontos Acumulados
+            </div>
+            <div class="id2">
+                R$67,56<br/>
+                <span class="purple">25 Pontos</span>
+            </div>
+        </div>
+        <div class="rowExtrato">
+            <div class="id1">
+                <span class="purple">25/04 - Farmácia Vitae</span>
+                <br/> Pontos Acumulados
+            </div>
+            <div class="id2">
+                R$67,56<br/>
+                <span class="purple">25 Pontos</span>
+            </div>
+        </div>
+        <div class="rowExtrato">
+            <div class="id1">
+                <span class="purple">25/04 - Farmácia Vitae</span>
+                <br/> Pontos Acumulados
+            </div>
+            <div class="id2">
+                R$67,56<br/>
+                <span class="purple">25 Pontos</span>
+            </div>
+        </div>
+        <div class="rowExtratoUp">
+            <i class="fas fa-sort-up" (click)="hideExtrato()"></i>
+        </div>
+    </div>
+
+    <div class="title" style="margin-top:20px;">
+        ESTRELAS
+    </div>
+    <div class="infoSub" style="border: none;">
+        <div class="points">
+            <i class="fas fa-star yellow"></i>
+            <i class="fas fa-star yellow"></i>
+            <i class="fas fa-star yellow"></i>
+            <i class="fas fa-star gray"></i>
+            <i class="fas fa-star gray"></i>
+        </div>
+        <div class="smallSub" routerLink="premios">
+            Troque por Prêmios
+        </div>
+    </div>
+</div>
+<div class="boxSearch">
+    <input type="text" class="inputSearch" placeholder="O que você precisa hoje?"/>
+    <i class="fas fa-search iconSearch"></i>
+</div>
+
+<div class="categories">
+    <div class="scroll">
+        <div class="box" *ngFor="let item of data">
+            <img [src]="item.imagem" />
+            {{item.nome}}
+        </div>
+        
+    </div>
+
+    <div class="categoriesProd">
+        <div class="titleCategories">
+            DESTAQUES DE HOJE
+        </div>
+        <div class="scroll" style="margin-top: 20px;">
+            <div class="boxProduct">
+                <img src="../../../assets/imagens/product01.jpg" />
+                <div class="titleProduct">
+                    Colinas Society
+                </div>
+                <div class="priceProduct">
+                    R$ 100 / Hora
+                </div>
+                <div class="starProduct">
+                    <i class="fas fa-star yellow"></i>
+                    <i class="fas fa-star yellow"></i>
+                    <i class="fas fa-star yellow"></i>
+                    <i class="fas fa-star gray"></i>
+                    <i class="fas fa-star gray"></i>
+                </div>
+            </div>
+            <div class="boxProduct">
+                <img src="../../../assets/imagens/product01.jpg" />
+                <div class="titleProduct">
+                    Colinas Society
+                </div>
+                <div class="priceProduct">
+                    R$ 100 / Hora
+                </div>
+                <div class="starProduct">
+                    <i class="fas fa-star yellow"></i>
+                    <i class="fas fa-star yellow"></i>
+                    <i class="fas fa-star yellow"></i>
+                    <i class="fas fa-star gray"></i>
+                    <i class="fas fa-star gray"></i>
+                </div>
+            </div>
+            <div class="boxProduct">
+                <img src="../../../assets/imagens/product01.jpg" />
+                <div class="titleProduct">
+                    Colinas Society
+                </div>
+                <div class="priceProduct">
+                    R$ 100 / Hora
+                </div>
+                <div class="starProduct">
+                    <i class="fas fa-star yellow"></i>
+                    <i class="fas fa-star yellow"></i>
+                    <i class="fas fa-star yellow"></i>
+                    <i class="fas fa-star gray"></i>
+                    <i class="fas fa-star gray"></i>
+                </div>
+            </div>
+            <div class="boxProduct">
+                <img src="../../../assets/imagens/product01.jpg" />
+                <div class="titleProduct">
+                    Colinas Society
+                </div>
+                <div class="priceProduct">
+                    R$ 100 / Hora
+                </div>
+                <div class="starProduct">
+                    <i class="fas fa-star yellow"></i>
+                    <i class="fas fa-star yellow"></i>
+                    <i class="fas fa-star yellow"></i>
+                    <i class="fas fa-star gray"></i>
+                    <i class="fas fa-star gray"></i>
+                </div>
+            </div>
+            <div class="boxProduct">
+                <img src="../../../assets/imagens/product01.jpg" />
+                <div class="titleProduct">
+                    Colinas Society
+                </div>
+                <div class="priceProduct">
+                    R$ 100 / Hora
+                </div>
+                <div class="starProduct">
+                    <i class="fas fa-star yellow"></i>
+                    <i class="fas fa-star yellow"></i>
+                    <i class="fas fa-star yellow"></i>
+                    <i class="fas fa-star gray"></i>
+                    <i class="fas fa-star gray"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="categoriesProd">
+        <div class="titleCategories">
+            <i class="fas fa-utensils"></i> Restaurantes
+        </div>
+        <div class="scroll" style="margin-top: 20px;">
+            <div class="boxLogo">
+                <img src="../../../assets/imagens/logo1.png" />
+                Restaurante 01
+            </div>
+            <div class="boxLogo">
+                <img src="../../../assets/imagens/logo2.png" />
+                Restaurante 02
+            </div>
+            <div class="boxLogo">
+                <img src="../../../assets/imagens/logo3.png" />
+                Restaurante 02
+            </div>
+            <div class="boxLogo">
+                <img src="../../../assets/imagens/logo4.png" />
+                Restaurante 02
+            </div>
+        </div>
+    </div>
+
+    <div class="categoriesProd">
+        <div class="titleCategories">
+            <i class="fas fa-capsules"></i> Farmácias
+        </div>
+        <div class="scroll" style="margin-top: 20px;">
+            <div class="boxLogo">
+                <img src="../../../assets/imagens/logo1.png" />
+                Farmácia 01
+            </div>
+            <div class="boxLogo">
+                <img src="../../../assets/imagens/logo2.png" />
+                Farmácia 03
+            </div>
+            <div class="boxLogo">
+                <img src="../../../assets/imagens/logo3.png" />
+                Farmácia 04
+            </div>
+            <div class="boxLogo">
+                <img src="../../../assets/imagens/logo4.png" />
+                Farmácia 05
+            </div>
+        </div>
+    </div>
+</div>
